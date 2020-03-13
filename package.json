@@ -1,5 +1,5 @@
 {
-  "name": "textlint-plugin-rst",
+  "name": "textlint-plugin-rest",
   "description": "reStructuredText support for textlint",
   "version": "0.1.1",
   "main": "lib/index.js",

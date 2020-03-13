@@ -1,25 +1,25 @@
-# textlint-plugin-rst
+# textlint-plugin-rest
 
 reStructuredText(`*.rst`) support for [textlint](https://github.com/textlint/textlint "textlint").
 
 ## Installation
 
-To install textlint-plugin-rst, the follow python package must be installed.
+To install textlint-plugin-rest, the follow Python package must be installed.
 
  - [docutils-ast-writer](https://github.com/jimo1001/docutils-ast-writer "docutils-ast-writer")
 
 And run follow command.
 
-    npm install textlint-plugin-rst
+    npm install https://github.com/anzawatta/textlint-plugin-rest
 
 ## Usage
 
-- Add `--plugin rst` to command options
+- Add `--plugin rest` to command options
 - or add following codes to `.textlintrc`
 ```
 {
     "plugins": [
-        "rst"
+        "rest"
     ]
 }
 ```
