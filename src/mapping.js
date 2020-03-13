@@ -1,7 +1,7 @@
 // LICENSE : MIT
 "use strict";
 
-export const syntaxMap = {
+export const nodeTypes = {
     "document": "Document",
     "paragraph": "Paragraph",
     "block_quote": "BlockQuote",
@@ -9,6 +9,7 @@ export const syntaxMap = {
     "bullet_list": "List",
     "title": "Header",
     "literal_block": "CodeBlock",
+    "comment": "Comment",
     "reference": "Link",
     "meta": "Html",
     "text": "Str",
@@ -18,7 +19,7 @@ export const syntaxMap = {
     "inline": "Code"
 };
 
-export const reSTAttributeKeyMap = {
+export const reSTAttributeToType = {
     "tagname": "type",
     "rawsource": "raw",
     "text": "value"

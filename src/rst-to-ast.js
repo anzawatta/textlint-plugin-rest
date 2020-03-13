@@ -3,12 +3,12 @@
 import { execSync } from "child_process";
 import traverse from "traverse";
 import StructuredSource from "structured-source";
-import { syntaxMap, reSTAttributeKeyMap } from "./mapping";
+import { nodeTypes, reSTAttributeToType } from "./mapping";
 
 function filterAndReplaceNodeAttributes(node) {
-    Object.keys(reSTAttributeKeyMap).forEach(key => {
+    Object.keys(reSTAttributeToType).forEach(key => {
         let v = node[key];
-        node[reSTAttributeKeyMap[key]] = v;
+        node[reSTAttributeToType[key]] = v;
         if (v !== undefined) {
             delete node[key];
         }
@@ -30,7 +30,7 @@ export function parse(text) {
             if (node.type === null) {
                 node.type = "text";
             }
-            node.type = syntaxMap[node.type];
+            node.type = nodeTypes[node.type];
             if (!node.type) {
                 node.type = "Unknown";
             }
@@ -50,3 +50,4 @@ export function parse(text) {
     });
     return ast;
 }
+
