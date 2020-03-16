@@ -5,13 +5,14 @@ import { parse } from "./rst-to-ast";
 export default class ReSTProcessor {
     constructor(config) {
         this.config = config;
+        this.extensions = this.config.extensions ? this.config.extensions : [];
     }
 
-    static availableExtensions() {
+    availableExtensions() {
         return [
             ".rst",
             ".rest"
-        ];
+        ].concat(this.extensions);
     }
 
     processor(ext) {
